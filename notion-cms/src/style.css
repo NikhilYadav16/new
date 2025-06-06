@@ -1,63 +1,74 @@
-body{
-    display: grid;
-    place-content: center;
-    background-image: var(--gradient-15);
+body {
+display: grid;
+place-content: center;
+background-image: var(--gradient-15);
+font-family: sans-serif;
 }
-    .card-container {
-      display: flex;
-      align-items: start;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: var(--size-fluid-4);
-      margin: var(--size-fluid-4);
-      max-width: 1500px;
-    }
 
-    .card {
-      flex: 0 1 400px;
-      box-shadow: var(--shadow-5);
-      padding: var(--size-fluid-3);
-      border-radius: var(--radius-4);
-      background-color: var(--violet-0);
-      display: grid;
-      gap: var(--size-2);
-    }
+.card-container {
+display: flex;
+align-items: start;
+flex-wrap: wrap;
+justify-content: center;
+gap: var(--size-fluid-4);
+margin: var(--size-fluid-4);
+max-width: 1500px;
+}
 
-    .card__heading {
-      color: var(--pink-4);
-    }
+.card {
+flex: 0 1 400px;
+box-shadow: var(--shadow-5);
+padding: var(--size-fluid-3);
+border-radius: var(--radius-4);
+background-color: var(--violet-0);
+display: grid;
+gap: var(--size-2);
+}
 
-    .card__content {
-      display: grid;
-      gap: var(--size-2);
-    }
+.card_image {
+width: 100%;
+height: auto;
+border-radius: var(--radius-2);
+object-fit: cover;
+}
 
-    .card__btn {
-      background-color: var(--pink-4);
-      color: white;
-      width: max-content;
-      padding: var(--size-2) var(--size-fluid-2);
-      border-radius: var(--radius-4);
-      margin-top: var(--size-fluid-1);
-      box-shadow: var(--shadow-4);
-      transition: all 250ms var(--ease-squish-3);
-    }
+.card__heading {
+color: var(--pink-4);
+font-size: 1.5rem;
+}
 
-    .card__btn:is(:hover, :focus) {
-      text-decoration: none;
-      box-shadow: none;
-      transform: scale(.9);
-    }
-     @media (prefers-color-scheme: dark) {
-      html {
-        --shadow-strength: 5%;
-      }
+.card__content {
+display: grid;
+gap: var(--size-2);
+}
 
-      body {
-        background-image: var(--gradient-23);
-      }
+.card__btn {
+background-color: var(--pink-4);
+color: white;
+width: max-content;
+padding: var(--size-2) var(--size-fluid-2);
+border-radius: var(--radius-4);
+margin-top: var(--size-fluid-1);
+box-shadow: var(--shadow-4);
+transition: all 250ms var(--ease-squish-3);
+text-decoration: none;
+}
 
-      .card {
-        background-color: var(--gray-8);
-      }
-    }
+.card__btn:is(:hover, :focus) {
+box-shadow: none;
+transform: scale(0.95);
+}
+
+@media (prefers-color-scheme: dark) {
+html {
+--shadow-strength: 5%;
+}
+
+body {
+background-image: var(--gradient-23);
+}
+
+.card {
+background-color: var(--gray-8);
+}
+}
